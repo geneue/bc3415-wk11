@@ -59,7 +59,7 @@ def image_request():
 def image_reply():
     q = request.form.get("q")
     r = replicate.run(
-        "stability-ai/stable-diffusion:db21e45d3f7023abc2a46ee38a23973f6dce16bb082a930b0c49861f96d1e5bf",
+        "ai-forever/kandinsky-2.2:ea1addaab376f4dc227f5368bbd8eff901820fd1cc14ed8cad63b29249e9d463",
         input={
             "prompt": q,
         },
@@ -74,7 +74,7 @@ def music_request():
 def music_reply():
     q = request.form.get("q")
     r = replicate.run(
-        "meta/musicgen:7be0f12c54a8d033a0fbd14418c9af98962da9a86f5ff7811f9b3423a1f0b7d7",
+        "suno-ai/bark:b76242b40d67c76ab6742e987628a2a9ac019e11d56ab96c4e91ce03b79b2787",
         input={
             "prompt": q,
             "duration:": 5
@@ -90,7 +90,7 @@ def video_request():
 def video_reply():
     q = request.form.get("q")
     r = replicate.run(
-        "anotherjesse/zeroscope-v2-xl:9f747673945c62801b13b84701c783929c0ee784e4748ec062204894dda1a351",
+        "lucataco/animate-diff:beecf59c4aee8d81bf04f0381033dfa10dc16e845b4ae00d281e2fa377e48a9f",
         input={
             "prompt": q,
             "num_frames": 5
